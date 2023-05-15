@@ -23,7 +23,7 @@ You can upload videos one of two ways:
 
 1. Now that our video is on SSRDE, we can send a job to SSRDE to run Openpose! 
 
-    To do this, you need a shell script. The current OpenPose script can be found in /sphere/greene-lab/lab_members/salma/openpose_testing and is named "run_openpose.sh". The command to run OpenPose from my directories is already there, but if you created these directories somewhere else you will just need to alter the command like so:
+    To do this, you need a shell script. The current OpenPose script can be found in /sphere/greene-lab/lab_members/salma/openpose_testing and is named "run_openpose.sh". The command to run OpenPose from my directories is already there, but if you created these directories somewhere else you can make a copy of the script and replace the command like so:
 `singularity exec -B {NAME OF FULL PATH TO VIDEO DATA DIRECTORY}:/data {NAME OF DOCKER IMAGE FILE} \
 /openpose/build/examples/openpose/openpose.bin --model_folder /openpose/models \
 —number_people_max 1 --render_pose 0 --face --face_render 1 \
@@ -31,7 +31,7 @@ You can upload videos one of two ways:
 --write_video /data/$1_openpose.mp4 --keypoint_scale 4 \
 --write_json /data/json/$1`
 
-2. To queue the job on SSRDE, you need to enter the following command: `sbatch -J {NAME OF JOB} -p general --mail-user={YOUR EMAIL} --mail-type=ALL -o {PATH TO OPENPOSE TESTING DIRECTORY}/JOB NAME}_output.o%j.txt {PATH TO RUN OPENPOSE SCRIPT}/run_openpose.sh {NAME OF VIDEO FILE WITHOUT .mp4 EXTENSION}`
+2. To queue the job on SSRDE, you need to enter the following command: `sbatch -J {NAME OF JOB} -p general --mail-user={YOUR EMAIL} --mail-type=ALL -o {PATH TO OPENPOSE TESTING DIRECTORY}/JOB NAME}_output.o%j.txt {PATH TO OPENPOSE SCRIPT}/run_openpose.sh {NAME OF VIDEO FILE WITHOUT .mp4 EXTENSION}`
 
     For me, the command will look like this if I am running it on a video named pt102.mp4: `sbatch -J PT102 -p general --mail-user=szreik@ucsd.edu --mail-type=ALL -o /sphere/greene-lab/lab_members/salma/openpose_testing/PT102_output.o%j.txt /sphere/greene-lab/lab_members/salma/openpose_testing/run_openpose.sh pt102`
 
