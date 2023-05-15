@@ -12,6 +12,7 @@
 
 You can upload videos one of two ways:
 * On Mac, you can connect to the server through Finder so you can visually see the files and drag them from your local machine to SSRDE. [How to Connect to Remote Server on Mac](https://www.switchingtomac.com/tutorials/osx/connecting-to-a-remote-or-local-server/)
+   * Drag the video from your local machine into your videodata directory on SSRDE 
 
 * Using the scp command:
     * On you local machine (not in SSRDE!) go to the directory where you have your video, and enter the command `scp {NAME OF VIDEO FILE} {SSRDE USERNAME}@ssrde.ucsd.edu:/{PATH TO STORE VIDEO ON SSRDE}`. Once it fully uploads you should be able to find the video in the SSRDE path you inputted.
