@@ -6,7 +6,7 @@
 `singularity pull docker://szreik/openpose-cpu-face:latest`
 4. When completed, you should see a file named "openpose-cpu-face_latest.sif" in your directory. It can be renamed to whatever you like as long as it has .sif extension
 5. Create a new directory to store input videos. In this example, the directory is called "videodata" so enter the command `mkdir videodata`. Make sure you are in the openpose_testing directory when you enter this command.
-6. Inside the "videodata" directory, make a directory named "json" by entering `mkdir json`.
+6. Go inside the videodata directory with the command `cd videodata`, and make a directory named "json" by entering `mkdir json`.
 
 ## Uploading videos
 
