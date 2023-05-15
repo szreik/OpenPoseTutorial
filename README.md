@@ -2,7 +2,7 @@
 ## Setting Up OpenPose Environment
 1. Log into SSRDE
 2. Create directory where you will be running Openpose. In this example, the directory is called "openpose_testing" so to make the directory, enter the command `mkdir openpose_testing`
-3. In the directory, enter the command:
+3. Enter the directory with `cd openpose_testing`, and enter the command:
 `singularity pull docker://szreik/openpose-cpu-face:latest`
 4. When completed, you should see a file named "openpose-cpu-face_latest.sif" in your directory. It can be renamed to whatever you like as long as it has .sif extension
 5. In the same directory where you created the Docker image (file with .sif extension), create a new directory to store input videos. In this example, the directory is called "videodata" so enter the command `mkdir videodata`. Make sure you are in the openpose_testing directory when you enter this command.
