@@ -1,7 +1,7 @@
 # Installing and Running OpenPose Docker on SSRDE
 ## Setting Up OpenPose Environment
-1. Log into SSRDE
-2. Create directory where you will be running Openpose. In this example, the directory is called "openpose_testing" so to make the directory, enter the command `mkdir openpose_testing`
+1. Log into SSRDE and go to the path where you want to create and run Openpose
+2. Create a directory for Openpose. In this example, the directory is called "openpose_testing" so to make the directory, enter the command `mkdir openpose_testing`
 3. Go inside the directory with `cd openpose_testing`, and enter the command:
 `singularity pull docker://szreik/openpose-cpu-face:latest`
 4. When completed, you should see a file named "openpose-cpu-face_latest.sif" in your directory. It can be renamed to whatever you like as long as it has .sif extension
