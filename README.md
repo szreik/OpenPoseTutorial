@@ -32,6 +32,6 @@ You can upload videos one of two ways:
 
 2. To queue the job on SSRDE, you need to enter the following command: `sbatch -J {NAME OF JOB} -p general --mail-user={YOUR EMAIL} --mail-type=ALL -o {PATH TO OPENPOSE TESTING DIRECTORY}/JOB NAME}_output.o%j.txt {PATH TO RUN OPENPOSE SCRIPT}/run_openpose.sh {NAME OF VIDEO FILE WITHOUT .mp4 EXTENSION}`
 
-    For me, the command will look like this if I am running it on a video named pt102.mp4: `sbatch -J PT102 -p general --mail-user=szreik@ucsd.edu --mail-type=ALL -o /sphere/greene-lab/lab_members/salma/openpose_testing/PT102_output.o%j.txt /sphere/greene-lab/lab_members/salma/openpose_testing/run_openpose.sh pt102
+    For me, the command will look like this if I am running it on a video named pt102.mp4: `sbatch -J PT102 -p general --mail-user=szreik@ucsd.edu --mail-type=ALL -o /sphere/greene-lab/lab_members/salma/openpose_testing/PT102_output.o%j.txt /sphere/greene-lab/lab_members/salma/openpose_testing/run_openpose.sh pt102`
 
 3. You shoud now be able to enter the command `squeue` and see your job in the queue. You will get an email when the job starts/ends and you can find the output of running the script in your openpose_testing directory
